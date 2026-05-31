@@ -1,0 +1,15 @@
+/node_modules
+/dist
+/.env
+/.env.local
+/.env.development
+/.env.test
+/.env.production
+/.vscode
+.DS_Store
+*.log
+*.lock
+BUILD_INSTRUCTIONS.md
+PROMPTS.md
+SPEC.md
+tasks.md

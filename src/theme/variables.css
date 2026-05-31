@@ -1,0 +1,245 @@
+/* ============================================
+ * ObjectLent — Tema Visual Premium
+ * ============================================
+ * Sistema de disseny fosc amb accents vibrants
+ * Optimitzat per a l'experiència de detecció d'objectes
+ * ============================================ */
+
+/* ============================================
+ * Variables globals de l'aplicació
+ * ============================================ */
+:root {
+  /* ---- Colors principals de l'aplicació ---- */
+  --app-bg-deep: #0a0a1a;
+  --app-bg-surface: #12122a;
+  --app-bg-card: #1a1a3e;
+  --app-bg-elevated: #222255;
+
+  /* ---- Efectes de vidre (glassmorphism) ---- */
+  --app-glass-bg: rgba(255, 255, 255, 0.05);
+  --app-glass-bg-hover: rgba(255, 255, 255, 0.08);
+  --app-glass-border: rgba(255, 255, 255, 0.1);
+  --app-glass-border-hover: rgba(255, 255, 255, 0.18);
+
+  /* ---- Estils de la càmera ---- */
+  --app-camera-border-radius: 20px;
+  --app-camera-shadow: 0 8px 32px rgba(108, 92, 231, 0.15);
+
+  /* ---- Insígnies de detecció ---- */
+  --app-detection-badge-bg: rgba(108, 92, 231, 0.85);
+  --app-detection-badge-bg-high: rgba(0, 206, 201, 0.85);
+  --app-detection-badge-bg-low: rgba(253, 121, 168, 0.85);
+  --app-detection-badge-radius: 12px;
+  --app-detection-badge-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+
+  /* ---- Ombres i profunditat ---- */
+  --app-shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.2);
+  --app-shadow-md: 0 4px 16px rgba(0, 0, 0, 0.25);
+  --app-shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.3);
+  --app-shadow-glow-primary: 0 0 20px rgba(108, 92, 231, 0.3);
+  --app-shadow-glow-secondary: 0 0 20px rgba(0, 206, 201, 0.3);
+
+  /* ---- Transicions globals ---- */
+  --app-transition-fast: 150ms ease;
+  --app-transition-normal: 250ms ease;
+  --app-transition-slow: 400ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* ---- Tipografia ---- */
+  --app-font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* ============================================
+ * Tema Ionic — Colors principals
+ * ============================================ */
+:root {
+  /* ---- Color primari: Porpra vibrant ---- */
+  --ion-color-primary: #6c5ce7;
+  --ion-color-primary-rgb: 108, 92, 231;
+  --ion-color-primary-contrast: #ffffff;
+  --ion-color-primary-contrast-rgb: 255, 255, 255;
+  --ion-color-primary-shade: #5f51cb;
+  --ion-color-primary-tint: #7b6ce9;
+
+  /* ---- Color secundari: Cian/Turquesa ---- */
+  --ion-color-secondary: #00cec9;
+  --ion-color-secondary-rgb: 0, 206, 201;
+  --ion-color-secondary-contrast: #000000;
+  --ion-color-secondary-contrast-rgb: 0, 0, 0;
+  --ion-color-secondary-shade: #00b5b1;
+  --ion-color-secondary-tint: #1ad3ce;
+
+  /* ---- Color terciari: Blau elèctric ---- */
+  --ion-color-tertiary: #a29bfe;
+  --ion-color-tertiary-rgb: 162, 155, 254;
+  --ion-color-tertiary-contrast: #000000;
+  --ion-color-tertiary-contrast-rgb: 0, 0, 0;
+  --ion-color-tertiary-shade: #8e88e0;
+  --ion-color-tertiary-tint: #aba5fe;
+
+  /* ---- Èxit: Verd per a deteccions d'alta confiança ---- */
+  --ion-color-success: #00b894;
+  --ion-color-success-rgb: 0, 184, 148;
+  --ion-color-success-contrast: #000000;
+  --ion-color-success-contrast-rgb: 0, 0, 0;
+  --ion-color-success-shade: #00a282;
+  --ion-color-success-tint: #1abf9f;
+
+  /* ---- Advertència: Taronja per a confiança mitjana ---- */
+  --ion-color-warning: #fdcb6e;
+  --ion-color-warning-rgb: 253, 203, 110;
+  --ion-color-warning-contrast: #000000;
+  --ion-color-warning-contrast-rgb: 0, 0, 0;
+  --ion-color-warning-shade: #dfb361;
+  --ion-color-warning-tint: #fdd07d;
+
+  /* ---- Perill: Rosa per a confiança baixa ---- */
+  --ion-color-danger: #fd79a8;
+  --ion-color-danger-rgb: 253, 121, 168;
+  --ion-color-danger-contrast: #000000;
+  --ion-color-danger-contrast-rgb: 0, 0, 0;
+  --ion-color-danger-shade: #df6b94;
+  --ion-color-danger-tint: #fd86b1;
+
+  /* ---- Fosc ---- */
+  --ion-color-dark: #e8e8f0;
+  --ion-color-dark-rgb: 232, 232, 240;
+  --ion-color-dark-contrast: #0a0a1a;
+  --ion-color-dark-contrast-rgb: 10, 10, 26;
+  --ion-color-dark-shade: #ccccda;
+  --ion-color-dark-tint: #eaeaf2;
+
+  /* ---- Mitjà ---- */
+  --ion-color-medium: #8888a8;
+  --ion-color-medium-rgb: 136, 136, 168;
+  --ion-color-medium-contrast: #000000;
+  --ion-color-medium-contrast-rgb: 0, 0, 0;
+  --ion-color-medium-shade: #787894;
+  --ion-color-medium-tint: #9494b1;
+
+  /* ---- Clar ---- */
+  --ion-color-light: #1a1a3e;
+  --ion-color-light-rgb: 26, 26, 62;
+  --ion-color-light-contrast: #ffffff;
+  --ion-color-light-contrast-rgb: 255, 255, 255;
+  --ion-color-light-shade: #171737;
+  --ion-color-light-tint: #313151;
+}
+
+/* ============================================
+ * Tema fosc — Aplicat globalment
+ * ============================================
+ * ObjectLent utilitza exclusivament mode fosc
+ * per a una experiència visual premium i per
+ * reduir el consum de bateria en pantalles OLED
+ * ============================================ */
+body {
+  --ion-background-color: #0a0a1a;
+  --ion-background-color-rgb: 10, 10, 26;
+
+  --ion-text-color: #e8e8f0;
+  --ion-text-color-rgb: 232, 232, 240;
+
+  /* Superfícies amb profunditat */
+  --ion-card-background: #12122a;
+  --ion-item-background: #12122a;
+
+  /* Barra d'eines amb transparència subtil */
+  --ion-toolbar-background: rgba(10, 10, 26, 0.92);
+  --ion-toolbar-color: #e8e8f0;
+
+  /* Pestanyes de navegació */
+  --ion-tab-bar-background: rgba(10, 10, 26, 0.95);
+  --ion-tab-bar-color: #8888a8;
+  --ion-tab-bar-color-selected: #6c5ce7;
+
+  /* Tipografia global */
+  font-family: var(--app-font-family);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Fons amb gradient subtil */
+  background: linear-gradient(
+    180deg,
+    #0a0a1a 0%,
+    #0d0d24 50%,
+    #0a0a1a 100%
+  );
+}
+
+/* ============================================
+ * Escala de colors per passos (steps)
+ * Per a l'ús en components Ionic interns
+ * Gradació del fosc (#0a0a1a) al clar (#e8e8f0)
+ * ============================================ */
+body {
+  --ion-color-step-50: #13132d;
+  --ion-color-step-100: #1c1c3f;
+  --ion-color-step-150: #252551;
+  --ion-color-step-200: #2e2e63;
+  --ion-color-step-250: #373775;
+  --ion-color-step-300: #404087;
+  --ion-color-step-350: #494999;
+  --ion-color-step-400: #5252ab;
+  --ion-color-step-450: #5b5bbd;
+  --ion-color-step-500: #6464cf;
+  --ion-color-step-550: #7373d3;
+  --ion-color-step-600: #8282d7;
+  --ion-color-step-650: #9191db;
+  --ion-color-step-700: #a0a0df;
+  --ion-color-step-750: #afafE3;
+  --ion-color-step-800: #bebee7;
+  --ion-color-step-850: #cdcdeb;
+  --ion-color-step-900: #dcdcef;
+  --ion-color-step-950: #ebebf3;
+}
+
+/* ============================================
+ * Ajustos específics per a iOS
+ * ============================================ */
+body.ios {
+  --ion-toolbar-background: rgba(10, 10, 26, 0.88);
+  --ion-toolbar-border-color: rgba(255, 255, 255, 0.08);
+}
+
+/* ============================================
+ * Ajustos específics per a Material Design (Android)
+ * ============================================ */
+body.md {
+  --ion-toolbar-background: rgba(10, 10, 26, 0.95);
+}
+
+/* ============================================
+ * Estils globals addicionals
+ * ============================================ */
+
+/*Scrollbar personalitzada per a navegadors Webkit */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(108, 92, 231, 0.3);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(108, 92, 231, 0.5);
+}
+
+/* Selecció de text amb colors de marca */
+::selection {
+  background: rgba(108, 92, 231, 0.4);
+  color: #ffffff;
+}
+
+/* Animació global de focus per a accessibilitat */
+*:focus-visible {
+  outline: 2px solid var(--ion-color-primary);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
