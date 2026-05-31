@@ -1,6 +1,6 @@
 # ObjectLent 🔍📱
 
-> **Projecte Final de DAM (Desenvolupament d'Aplicacions Multiplataforma)**
+> **Pràctica de DAM (Desenvolupament d'Aplicacions Multiplataforma)**
 > 
 > Aplicació mòbil híbrida per a la **detecció d'objectes en temps real amb Intel·ligència Artificial completament offline (on-device)**, desenvolupada amb Vue 3 (Composition API), Ionic Framework, Capacitor i TensorFlow.js.
 
